@@ -2,7 +2,6 @@ package service
 
 import (
 	"candidate-compatibility/domain/model"
-	"fmt"
 )
 
 type AnalysisService struct{}
@@ -53,8 +52,6 @@ func getTeamAverages(dto model.ResourcesDto) model.AttributeSet {
 }
 
 func getWeightedPercentage(value float64, average float64) float64 {
-	fmt.Println(value)
-	fmt.Println(average)
 	percentage := value / average
 	if percentage > 1 {
 		return 0.25

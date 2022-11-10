@@ -40,5 +40,6 @@ func (ac AnalyeController) HandleAnalyzeCompatibility(w http.ResponseWriter, r *
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 	jsonResp, _ := json.Marshal(resultDto)
 	w.Write(jsonResp)
-	//helper.HandleHttpOk(w, r, createdUrl, http.StatusCreated)
+
+	// TODO: Logger messages for service
 }

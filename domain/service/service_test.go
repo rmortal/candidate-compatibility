@@ -75,7 +75,8 @@ func TestAnalyzeCompatibility(t *testing.T) {
 	for _, resource := range payload.Team {
 		fmt.Println(resource.Name)
 	}
-	if 1 != 1 {
-		t.Errorf("error")
-	}
+
+	// TODO: Update tests for floating point numbers
 }
+
+// TODO: Add coverage for "helper methods" in analysisservice.go

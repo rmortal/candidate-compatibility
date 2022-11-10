@@ -15,8 +15,10 @@ func main() {
 
 	// Define Routes
 	r := chi.NewRouter()
+	analysisRoute := "/analyze-compatibility"
 	r.Mount("/analyze-compatibility", api.AnalyeController{}.AnalyzeRoutes())
-	fmt.Println("Mounted routes")
+	fmt.Printf("Mounted analysis controller at %s", analysisRoute)
 
+	// Entry point
 	log.Fatal(http.ListenAndServe(":"+port, r))
 }
