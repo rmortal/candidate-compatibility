@@ -26,18 +26,16 @@ func (ac AnalyeController) HandleAnalyzeCompatibility(w http.ResponseWriter, r *
 		return
 	}
 
-	var attributeSet model.AttributeSet
-	err = json.Unmarshal(body, &attributeSet)
+	var resources model.ResourcesDto
+	err = json.Unmarshal(body, &resources)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 
-	fmt.Println(attributeSet.Endurance)
-
 	// TODO: Move into helper pattern
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	jsonResp, _ := json.Marshal(attributeSet)
+	jsonResp, _ := json.Marshal(resources)
 	w.Write(jsonResp)
 
 	//createdUrl, err := service.UrlService{}.CreateUrl(url)
