@@ -2,6 +2,7 @@ package api
 
 import (
 	"candidate-compatibility/domain/model"
+	"candidate-compatibility/domain/service"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -33,15 +34,11 @@ func (ac AnalyeController) HandleAnalyzeCompatibility(w http.ResponseWriter, r *
 		return
 	}
 
-	//createdUrl, err := service.UrlService{}.CreateUrl(url)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
+	resultDto := service.AnalysisService{}.AnalyzeCompatibility(resources)
 
-	// TODO: Move into helper pattern
+	// TODO: Move into helper service
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	jsonResp, _ := json.Marshal(resources)
+	jsonResp, _ := json.Marshal(resultDto)
 	w.Write(jsonResp)
 	//helper.HandleHttpOk(w, r, createdUrl, http.StatusCreated)
 }
