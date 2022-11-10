@@ -33,15 +33,15 @@ func (ac AnalyeController) HandleAnalyzeCompatibility(w http.ResponseWriter, r *
 		return
 	}
 
-	// TODO: Move into helper pattern
-	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
-	jsonResp, _ := json.Marshal(resources)
-	w.Write(jsonResp)
-
 	//createdUrl, err := service.UrlService{}.CreateUrl(url)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
+
+	// TODO: Move into helper pattern
+	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
+	jsonResp, _ := json.Marshal(resources)
+	w.Write(jsonResp)
 	//helper.HandleHttpOk(w, r, createdUrl, http.StatusCreated)
 }
