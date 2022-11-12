@@ -15,7 +15,7 @@ type AnalyeController struct{}
 
 func (ac AnalyeController) AnalyzeRoutes() chi.Router {
 	r := chi.NewRouter()
-	r.Get(base, ac.HandleAnalyzeCompatibility)
+	r.Post(base, ac.HandleAnalyzeCompatibility)
 	return r
 }
 

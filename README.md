@@ -44,6 +44,9 @@ Spicy Food Tolerance 1 / 4    = 0.25 * 0.25 = 0.06
 - Attributes are scored from 0 - 10.
 - Scores are weighted equally accross 4 attributes (e.g., 0.25 for Intelligence, 0.25 for Strength, etc).
 
+# Implementation
+Application was build as a MVP RESTful API using Golang with a single endpoint.
+
 # Build Information
 🚨 These instuctions are based on a OSX workstation using [homebrew](https://brew.sh/). If you already have docker installed you may need to check if the service is running before the `docker build` step
 
@@ -70,13 +73,13 @@ This section outlines how generate the scores output.
 
 1. Start the application container as described in the build information section.
 2. Download [Postman](https://www.postman.com/) or tool of preferance to generate a GET request.
-3. Set the URL for the GET request to http://localhost:9000/analyze-compatibility.
-4. Within the body of the GET request use the example payload(adjust score values as desired). Set the body to raw and the type to JSON.
+3. Set the URL for the POST request to http://localhost:9000/analyze-compatibility.
+4. Within the body of the POST request use the example payload(adjust attribute values as desired). Set the body to raw and the type to JSON.
 5. Click Send to view the response. 
 
 ### Postman configuration
 The following links to a Google drive hosted image.
-[Postman example](https://drive.google.com/file/d/1syVdim9_uVuLGJP2AC__7hkVhwVKO6DK/view?usp=share_link)
+[Postman example](https://drive.google.com/file/d/1b-vqe2pcsuoHpt4j3Eg1XcSKG6TF8rLp/view?usp=share_link)
 
 ### Sample payload
 ```
