@@ -8,7 +8,7 @@ This project is a sample project to determine compatibility amongst an existing 
 - Scores closer to 0 indicate the candidate skill level may have definciencies in 1 or more attributes. 
 
 ## Determination of Score
-The applicant score and the team average score are measured as a percentage, to determine how far the applicant is from the team average. Once that percentage is calculated, it is weighted equally amoungst the other attributes at 25% of the total score. If a percentage exceeds 100%, it is rounded back down to 100%. The weighted percentage from all of the attributes is then added to determine the score 
+The applicant score and the team average score are measured as a percentage, to determine how far the applicant is from the team average. Once that percentage is calculated, it is weighted equally amoungst the other attributes at 25% of the total score. If a percentage exceeds 100%, it is rounded back down to 100%. The weighted percentage from all of the attributes is then added to determine the score. 
 
 ## Example Calulation
 ```
@@ -45,7 +45,7 @@ Spicy Food Tolerance 1 / 4    = 0.25 * 0.25 = 0.06
 - Scores are weighted equally accross 4 attributes (e.g., 0.25 for Intelligence, 0.25 for Strength, etc).
 
 # Implementation
-Application was build as a MVP RESTful API using Golang with a single endpoint.
+Application was built as a MVP RESTful API using Golang with a single endpoint.
 
 # Build Information
 🚨 These instuctions are based on a OSX workstation using [homebrew](https://brew.sh/). If you already have docker installed you may need to check if the service is running before the `docker build` step
@@ -72,13 +72,14 @@ Press `Ctrl-C` to stop the container.
 This section outlines how generate the scores output.
 
 1. Start the application container as described in the build information section.
-2. Download [Postman](https://www.postman.com/) or tool of preferance to generate a GET request.
+2. Download [Postman](https://www.postman.com/) or tool of preferance to generate a POST request.
 3. Set the URL for the POST request to http://localhost:9000/analyze-compatibility.
 4. Within the body of the POST request use the example payload(adjust attribute values as desired). Set the body to raw and the type to JSON.
 5. Click Send to view the response. 
 
 ### Postman configuration
 The following links to a Google drive hosted image.
+
 [Postman example](https://drive.google.com/file/d/1b-vqe2pcsuoHpt4j3Eg1XcSKG6TF8rLp/view?usp=share_link)
 
 ### Sample payload
