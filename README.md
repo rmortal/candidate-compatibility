@@ -152,3 +152,4 @@ The following are tech debt items idenfied for later development.
 - Error handling
 - Logging framework
 - Service method refactoring
+- Unit Tests
