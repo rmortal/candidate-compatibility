@@ -1,5 +1,5 @@
 # candidate-compatibility
-This project is a sample project to determine compatibility amongst an existing team and potential new members
+This project is a sample project to determine compatibility amongst an existing team and potential new members.
 
 # Business Process
 - Resources are evaluated against an existing team by the following attributes: Intelligence, Strength, Endurance, and Spicy Food Tolerance
@@ -41,8 +41,8 @@ Spicy Food Tolerance 1 / 4    = 0.25 * 0.25 = 0.06
 ```
 
 # Assumptions 
-- Attributes are score from 0 - 10
-- Scores are weighted equally accross 4 attributes (e.g., 0.25 for Intelligence, 0.25 for Strength, etc)
+- Attributes are scored from 0 - 10.
+- Scores are weighted equally accross 4 attributes (e.g., 0.25 for Intelligence, 0.25 for Strength, etc).
 
 # Build Information
 🚨 These instuctions are based on a OSX workstation using [homebrew](https://brew.sh/). If you already have docker installed you may need to check if the service is running before the `docker build` step
@@ -75,7 +75,9 @@ This section outlines how generate the scores output.
 5. Click Send to view the response. 
 
 ### Postman configuration
-![postmanConfig](https://drive.google.com/file/d/1syVdim9_uVuLGJP2AC__7hkVhwVKO6DK/view?usp=share_link)
+The following links to a Google drive hosted image.
+[Postman example](https://drive.google.com/file/d/1syVdim9_uVuLGJP2AC__7hkVhwVKO6DK/view?usp=share_link)
+
 ### Sample payload
 ```
 {
@@ -139,3 +141,10 @@ This section outlines how generate the scores output.
     ]
 }
 ```
+
+# TO-DO
+The following are tech debt items idenfied for later development. 
+- Backend input validation
+- Error handling
+- Logging framework
+- Service method refactoring
